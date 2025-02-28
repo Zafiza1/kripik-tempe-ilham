@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+.produk {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.produk-item {
+    background: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+.produk-item:hover {
+    transform: scale(1.05);
+}
+.produk-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+.harga {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+}
+.btn-beli {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+.btn-beli:hover {
+    background: #0056b3;
+}
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+}
+/* Efek Fade In */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efek Slide In */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1s ease-in-out forwards;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Efek Zoom In */
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomIn 1s ease-in-out forwards;
+}
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Background dengan Efek Blur dan Overlay */
+body {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: 600px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+/* Efek Hover pada Produk */
+.produk-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.produk-item {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #333;
+    animation: zoomIn 1s ease-in-out;
+}
+.produk-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Efek Hover pada Tombol Beli */
+.btn-beli {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.btn-beli:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Efek Loading Halaman */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #007bff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Tombol Kembali ke Atas */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+#backToTop:hover {
+    background: #0056b3;
+}
+
+/* Testimoni */
+.testimoni-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-in-out;
+}
+.testimoni-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+.testimoni {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+.testimoni strong {
+    display: block;
+    margin-top: 5px;
+    color: #007bff;
+}
